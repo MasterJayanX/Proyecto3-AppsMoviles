@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Gastos.ViewModels"
+             x:Class="Gastos.MainPage"
+             x:DataType="local:MainViewModel"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Border
+                BackgroundColor="#2B2B2B"
+                StrokeThickness="0"
+                Padding="20">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+
+                <Grid ColumnDefinitions="2*,1*" RowDefinitions="Auto">
+                    <VerticalStackLayout Spacing="12">
+                        <Label
+                            Text="TOTAL P/PERSONA (CLP)"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            HorizontalOptions="Center" />
+                        <Label
+                            Text="{Binding TotalPorPersona}"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="48" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout
+                        Grid.Column="1"
+                        Spacing="12"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center">
+                        <Label
+                            Text="SUBTOTAL (CLP)"
+                            TextColor="#B0B0B0"
+                            FontAttributes="Bold"
+                            HorizontalOptions="End" />
+                        <Label
+                            Text="{Binding SubtotalPorPersona}"
+                            TextColor="White"
+                            HorizontalOptions="End" />
+                        <Label
+                            Text="PROPINA (CLP)"
+                            TextColor="#B0B0B0"
+                            FontAttributes="Bold"
+                            HorizontalOptions="End" />
+                        <Label
+                            Text="{Binding PropinaPorPersona}"
+                            TextColor="White"
+                            HorizontalOptions="End" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+
+            <VerticalStackLayout Spacing="6">
+                <Label
+                    Text="Valor Boleta:"
+                    TextColor="White"
+                    FontAttributes="Bold" />
+                <Entry
+                    Text="{Binding TotalEntrada, Mode=TwoWay}"
+                    Keyboard="Numeric"
+                    Placeholder="Ingrese total"
+                    TextColor="White"
+                    BackgroundColor="#222222"
+                    PlaceholderColor="#888888"
+                    TextChanged="OnTotalEntradaTextChanged" />
+            </VerticalStackLayout>
+
+            <Label
+                Text="Elige Propina"
+                TextColor="White"
+                FontAttributes="Bold" />
+
+            <HorizontalStackLayout Spacing="10">
+                <Button
+                    Text="10%"
+                    Command="{Binding EstablecerPorcentajePropina}"
+                    CommandParameter="10"
+                    BackgroundColor="#5A2DFF"
+                    TextColor="White"
+                    CornerRadius="12" />
+                <Button
+                    Text="15%"
+                    Command="{Binding EstablecerPorcentajePropina}"
+                    CommandParameter="15"
+                    BackgroundColor="#5A2DFF"
+                    TextColor="White"
+                    CornerRadius="12" />
+                <Button
+                    Text="20%"
+                    Command="{Binding EstablecerPorcentajePropina}"
+                    CommandParameter="20"
+                    BackgroundColor="#5A2DFF"
+                    TextColor="White"
+                    CornerRadius="12" />
+            </HorizontalStackLayout>
+
+            <Label
+                Text="{Binding TextoPorcentajePropina}"
+                TextColor="White"
+                FontAttributes="Bold" />
+
+            <Slider
+                Minimum="0"
+                Maximum="50"
+                Value="{Binding PorcentajePropina, Mode=TwoWay}"
+                MinimumTrackColor="#5A2DFF"
+                MaximumTrackColor="#555555" />
+
+            <Label
+                Text="Dividir el Total"
+                TextColor="White"
+                FontAttributes="Bold" />
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button
+                    Text="-"
+                    Command="{Binding ComandoDisminuirPersonas}"
+                    BackgroundColor="#5A2DFF"
+                    TextColor="White"
+                    WidthRequest="56"
+                    CornerRadius="12" />
+                <Label
+                    Text="{Binding Personas}"
+                    TextColor="White"
+                    FontSize="24"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="56" />
+                <Button
+                    Text="+"
+                    Command="{Binding ComandoIncrementarPersonas}"
+                    BackgroundColor="#5A2DFF"
+                    TextColor="White"
+                    WidthRequest="56"
+                    CornerRadius="12" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
