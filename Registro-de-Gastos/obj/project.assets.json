@@ -2,6 +2,56 @@
   "version": 3,
   "targets": {
     "net10.0-android36.0": {
+      "CommunityToolkit.Maui/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "14.2.0",
+          "Microsoft.Maui.Controls": "10.0.60"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "10.0.60",
+          "Microsoft.Maui.Essentials": "10.0.60"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "GoogleGson/2.13.1.1": {
         "type": "package",
         "dependencies": {
@@ -251,34 +301,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.60": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.60",
+          "Microsoft.Maui.Controls.Core": "10.0.60",
+          "Microsoft.Maui.Controls.Xaml": "10.0.60",
+          "Microsoft.Maui.Resizetizer": "10.0.60"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.60": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.60",
+          "Microsoft.Maui.Controls.Xaml": "10.0.60"
         },
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.60": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20",
+          "Microsoft.Maui.Core": "10.0.60",
           "Xamarin.AndroidX.DynamicAnimation": "1.1.0.3"
         },
         "compile": {
@@ -396,12 +446,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.60": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.60",
+          "Microsoft.Maui.Core": "10.0.60"
         },
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -414,7 +464,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.60": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -422,8 +472,8 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Essentials": "10.0.60",
+          "Microsoft.Maui.Graphics": "10.0.60",
           "Xamarin.Android.Glide": "4.16.0.14",
           "Xamarin.AndroidX.Lifecycle.LiveData": "2.9.2.1",
           "Xamarin.AndroidX.Navigation.Common": "2.9.2.1",
@@ -448,10 +498,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.60": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Graphics": "10.0.60",
           "Xamarin.AndroidX.Activity": "1.10.1.3",
           "Xamarin.AndroidX.Browser": "1.8.0.11",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.4-alpha07",
@@ -468,7 +518,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.60": {
         "type": "package",
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Graphics.dll": {
@@ -481,7 +531,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.60": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -492,6 +542,73 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "sqlite-net-pcl/1.9.172": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.bundle_green": "2.1.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLite-net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLite-net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SQLitePCLRaw.bundle_green/2.1.10": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.lib.e_sqlite3.android": "2.1.10",
+          "SQLitePCLRaw.provider.e_sqlite3": "2.1.10"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/SQLitePCLRaw.batteries_v2.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SQLitePCLRaw.batteries_v2.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/2.1.10": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.android/2.1.10": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3/2.1.10": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.10"
+        },
+        "compile": {
+          "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.14": {
@@ -2487,6 +2604,56 @@
       }
     },
     "net10.0-android36.0/android-arm64": {
+      "CommunityToolkit.Maui/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "14.2.0",
+          "Microsoft.Maui.Controls": "10.0.60"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "10.0.60",
+          "Microsoft.Maui.Essentials": "10.0.60"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "GoogleGson/2.13.1.1": {
         "type": "package",
         "dependencies": {
@@ -2736,34 +2903,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.60": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.60",
+          "Microsoft.Maui.Controls.Core": "10.0.60",
+          "Microsoft.Maui.Controls.Xaml": "10.0.60",
+          "Microsoft.Maui.Resizetizer": "10.0.60"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.60": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.60",
+          "Microsoft.Maui.Controls.Xaml": "10.0.60"
         },
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.60": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20",
+          "Microsoft.Maui.Core": "10.0.60",
           "Xamarin.AndroidX.DynamicAnimation": "1.1.0.3"
         },
         "compile": {
@@ -2881,12 +3048,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.60": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.60",
+          "Microsoft.Maui.Core": "10.0.60"
         },
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -2899,7 +3066,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.60": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -2907,8 +3074,8 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Essentials": "10.0.60",
+          "Microsoft.Maui.Graphics": "10.0.60",
           "Xamarin.Android.Glide": "4.16.0.14",
           "Xamarin.AndroidX.Lifecycle.LiveData": "2.9.2.1",
           "Xamarin.AndroidX.Navigation.Common": "2.9.2.1",
@@ -2933,10 +3100,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.60": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Graphics": "10.0.60",
           "Xamarin.AndroidX.Activity": "1.10.1.3",
           "Xamarin.AndroidX.Browser": "1.8.0.11",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.4-alpha07",
@@ -2953,7 +3120,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.60": {
         "type": "package",
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Graphics.dll": {
@@ -2966,7 +3133,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.60": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -2977,6 +3144,73 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "sqlite-net-pcl/1.9.172": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.bundle_green": "2.1.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLite-net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLite-net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SQLitePCLRaw.bundle_green/2.1.10": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.lib.e_sqlite3.android": "2.1.10",
+          "SQLitePCLRaw.provider.e_sqlite3": "2.1.10"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/SQLitePCLRaw.batteries_v2.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SQLitePCLRaw.batteries_v2.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/2.1.10": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.android/2.1.10": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3/2.1.10": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.10"
+        },
+        "compile": {
+          "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.14": {
@@ -4972,6 +5206,56 @@
       }
     },
     "net10.0-android36.0/android-x64": {
+      "CommunityToolkit.Maui/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "14.2.0",
+          "Microsoft.Maui.Controls": "10.0.60"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/14.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "10.0.60",
+          "Microsoft.Maui.Essentials": "10.0.60"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/CommunityToolkit.Mvvm.targets": {}
+        }
+      },
       "GoogleGson/2.13.1.1": {
         "type": "package",
         "dependencies": {
@@ -5221,34 +5505,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.60": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.60",
+          "Microsoft.Maui.Controls.Core": "10.0.60",
+          "Microsoft.Maui.Controls.Xaml": "10.0.60",
+          "Microsoft.Maui.Resizetizer": "10.0.60"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.60": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.60",
+          "Microsoft.Maui.Controls.Xaml": "10.0.60"
         },
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.60": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20",
+          "Microsoft.Maui.Core": "10.0.60",
           "Xamarin.AndroidX.DynamicAnimation": "1.1.0.3"
         },
         "compile": {
@@ -5366,12 +5650,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.60": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.60",
+          "Microsoft.Maui.Core": "10.0.60"
         },
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -5384,7 +5668,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.60": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -5392,8 +5676,8 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Essentials": "10.0.60",
+          "Microsoft.Maui.Graphics": "10.0.60",
           "Xamarin.Android.Glide": "4.16.0.14",
           "Xamarin.AndroidX.Lifecycle.LiveData": "2.9.2.1",
           "Xamarin.AndroidX.Navigation.Common": "2.9.2.1",
@@ -5418,10 +5702,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.60": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Graphics": "10.0.60",
           "Xamarin.AndroidX.Activity": "1.10.1.3",
           "Xamarin.AndroidX.Browser": "1.8.0.11",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.4-alpha07",
@@ -5438,7 +5722,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.60": {
         "type": "package",
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Graphics.dll": {
@@ -5451,7 +5735,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.60": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -5462,6 +5746,73 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "sqlite-net-pcl/1.9.172": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.bundle_green": "2.1.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLite-net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLite-net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SQLitePCLRaw.bundle_green/2.1.10": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.lib.e_sqlite3.android": "2.1.10",
+          "SQLitePCLRaw.provider.e_sqlite3": "2.1.10"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/SQLitePCLRaw.batteries_v2.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SQLitePCLRaw.batteries_v2.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/2.1.10": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.android/2.1.10": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3/2.1.10": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.10"
+        },
+        "compile": {
+          "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
       "Xamarin.Android.Glide/4.16.0.14": {
@@ -7458,6 +7809,99 @@
     }
   },
   "libraries": {
+    "CommunityToolkit.Maui/14.2.0": {
+      "sha512": "V52SkGKAosIgqrHmi6qPt9AKwwFSLLePJ/K+2SeuYLTRFLyTaWcItOeWqMYIO7wnJ8tyVrAufgIJXM/2cql42Q==",
+      "type": "package",
+      "path": "communitytoolkit.maui/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ReadMe.txt",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.dll",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.SourceGenerators.dll",
+        "communitytoolkit.maui.14.2.0.nupkg.sha512",
+        "communitytoolkit.maui.nuspec",
+        "icon.png",
+        "lib/net10.0-android36.0/CommunityToolkit.Maui.dll",
+        "lib/net10.0-android36.0/CommunityToolkit.Maui.xml",
+        "lib/net10.0-ios26.0/CommunityToolkit.Maui.dll",
+        "lib/net10.0-ios26.0/CommunityToolkit.Maui.xml",
+        "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.dll",
+        "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.xml",
+        "lib/net10.0-windows10.0.19041/CommunityToolkit.Maui.dll",
+        "lib/net10.0-windows10.0.19041/CommunityToolkit.Maui.pri",
+        "lib/net10.0-windows10.0.19041/CommunityToolkit.Maui.xml",
+        "lib/net10.0/CommunityToolkit.Maui.dll",
+        "lib/net10.0/CommunityToolkit.Maui.xml"
+      ]
+    },
+    "CommunityToolkit.Maui.Core/14.2.0": {
+      "sha512": "4H71Kb8EpyIe705SXBSHYTqNkQeS6lZdttP+yf3qSidbUAG//Fhmn1nz6Fw3SZbt2LwHbWTe6r/q2NApze17Ng==",
+      "type": "package",
+      "path": "communitytoolkit.maui.core/14.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ReadMe.txt",
+        "communitytoolkit.maui.core.14.2.0.nupkg.sha512",
+        "communitytoolkit.maui.core.nuspec",
+        "icon.png",
+        "lib/net10.0-android36.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net10.0-android36.0/CommunityToolkit.Maui.Core.xml",
+        "lib/net10.0-ios26.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net10.0-ios26.0/CommunityToolkit.Maui.Core.xml",
+        "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.Core.xml",
+        "lib/net10.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll",
+        "lib/net10.0-windows10.0.19041/CommunityToolkit.Maui.Core.pri",
+        "lib/net10.0-windows10.0.19041/CommunityToolkit.Maui.Core.xml",
+        "lib/net10.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net10.0/CommunityToolkit.Maui.Core.xml"
+      ]
+    },
+    "CommunityToolkit.Mvvm/8.4.0": {
+      "sha512": "tqVU8yc/ADO9oiTRyTnwhFN68hCwvkliMierptWOudIAvWY1mWCh5VFh+guwHJmpMwfg0J0rY+yyd5Oy7ty9Uw==",
+      "type": "package",
+      "path": "communitytoolkit.mvvm/8.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "License.md",
+        "ThirdPartyNotices.txt",
+        "analyzers/dotnet/roslyn4.0/cs/CommunityToolkit.Mvvm.CodeFixers.dll",
+        "analyzers/dotnet/roslyn4.0/cs/CommunityToolkit.Mvvm.SourceGenerators.dll",
+        "analyzers/dotnet/roslyn4.12/cs/CommunityToolkit.Mvvm.CodeFixers.dll",
+        "analyzers/dotnet/roslyn4.12/cs/CommunityToolkit.Mvvm.SourceGenerators.dll",
+        "analyzers/dotnet/roslyn4.3/cs/CommunityToolkit.Mvvm.CodeFixers.dll",
+        "analyzers/dotnet/roslyn4.3/cs/CommunityToolkit.Mvvm.SourceGenerators.dll",
+        "build/CommunityToolkit.Mvvm.FeatureSwitches.targets",
+        "build/CommunityToolkit.Mvvm.SourceGenerators.targets",
+        "build/CommunityToolkit.Mvvm.Windows.targets",
+        "build/CommunityToolkit.Mvvm.WindowsSdk.targets",
+        "build/CommunityToolkit.Mvvm.targets",
+        "buildTransitive/CommunityToolkit.Mvvm.FeatureSwitches.targets",
+        "buildTransitive/CommunityToolkit.Mvvm.SourceGenerators.targets",
+        "buildTransitive/CommunityToolkit.Mvvm.Windows.targets",
+        "buildTransitive/CommunityToolkit.Mvvm.WindowsSdk.targets",
+        "buildTransitive/CommunityToolkit.Mvvm.targets",
+        "communitytoolkit.mvvm.8.4.0.nupkg.sha512",
+        "communitytoolkit.mvvm.nuspec",
+        "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.dll",
+        "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.pdb",
+        "lib/net8.0-windows10.0.17763/CommunityToolkit.Mvvm.xml",
+        "lib/net8.0/CommunityToolkit.Mvvm.dll",
+        "lib/net8.0/CommunityToolkit.Mvvm.pdb",
+        "lib/net8.0/CommunityToolkit.Mvvm.xml",
+        "lib/netstandard2.0/CommunityToolkit.Mvvm.dll",
+        "lib/netstandard2.0/CommunityToolkit.Mvvm.pdb",
+        "lib/netstandard2.0/CommunityToolkit.Mvvm.xml",
+        "lib/netstandard2.1/CommunityToolkit.Mvvm.dll",
+        "lib/netstandard2.1/CommunityToolkit.Mvvm.pdb",
+        "lib/netstandard2.1/CommunityToolkit.Mvvm.xml"
+      ]
+    },
     "GoogleGson/2.13.1.1": {
       "sha512": "1yD5W1UPmgEEHrqdtVJI7330h1foGWiehVC07er3NiZxJPMmphTmPz2kuSXawIo8xmeIvd92WpiTOEmYpk6mzQ==",
       "type": "package",
@@ -7896,10 +8340,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Maui.Controls/10.0.20": {
-      "sha512": "c/Tsp1TGBQNkqpKd/aNkTnFV0FOtjyMyV04Naigg/7MphJwdc0ZI0Dw2P0TvC+tm//Ut+SnviTqlDow6V4tSmA==",
+    "Microsoft.Maui.Controls/10.0.60": {
+      "sha512": "roufyrdUAejA9xeMY4kEZHYyFyqCUvWNJ7QKMWNzJT0VBQlMFkK+kCVUr6glR6ZsmPDW2OOy4YyflTAW8UF4sQ==",
       "type": "package",
-      "path": "microsoft.maui.controls/10.0.20",
+      "path": "microsoft.maui.controls/10.0.60",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7907,14 +8351,14 @@
         "LICENSE.TXT",
         "README.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "microsoft.maui.controls.10.0.20.nupkg.sha512",
+        "microsoft.maui.controls.10.0.60.nupkg.sha512",
         "microsoft.maui.controls.nuspec"
       ]
     },
-    "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
-      "sha512": "8DbAwGgvgf3QPV1WCu6CabRDTZjtq7kd11sELwYhZ2ZFCdHtGTeLyvpMgnbAtMUwix4hnGyWH8fZKQJlVDBuYA==",
+    "Microsoft.Maui.Controls.Build.Tasks/10.0.60": {
+      "sha512": "4RI15IhLt8TYq9QcqeRC25X603VRdUXnUFiDO9zZRdEAmTo2FTrMwcguOfX+IQb9d7FF4Iu+tQwnA3Q2a9ncDA==",
       "type": "package",
-      "path": "microsoft.maui.controls.build.tasks/10.0.20",
+      "path": "microsoft.maui.controls.build.tasks/10.0.60",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7996,14 +8440,14 @@
         "buildTransitive/netstandard2.0/zh-HK/Microsoft.Maui.Controls.Build.Tasks.resources.dll",
         "buildTransitive/netstandard2.0/zh-Hans/Microsoft.Maui.Controls.Build.Tasks.resources.dll",
         "buildTransitive/netstandard2.0/zh-Hant/Microsoft.Maui.Controls.Build.Tasks.resources.dll",
-        "microsoft.maui.controls.build.tasks.10.0.20.nupkg.sha512",
+        "microsoft.maui.controls.build.tasks.10.0.60.nupkg.sha512",
         "microsoft.maui.controls.build.tasks.nuspec"
       ]
     },
-    "Microsoft.Maui.Controls.Core/10.0.20": {
-      "sha512": "Go8C7a0QaGiQ2EBMsxbbm52DI5+HipgT7C9AslfyfkCU8/H6gicLsPUxae5r9TyrZbgsw5KUnnPEUPJlUwtBcw==",
+    "Microsoft.Maui.Controls.Core/10.0.60": {
+      "sha512": "UlxYEL8k26iEMTJAiti3rQffohHRx5+cx+S41Xw7KTNXss0Kty+LIysUlX9U51RmxPs9CXFXAbHFxKzQzqufLA==",
       "type": "package",
-      "path": "microsoft.maui.controls.core/10.0.20",
+      "path": "microsoft.maui.controls.core/10.0.60",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8326,14 +8770,14 @@
         "lib/netstandard2.1/zh-HK/Microsoft.Maui.Controls.resources.dll",
         "lib/netstandard2.1/zh-Hans/Microsoft.Maui.Controls.resources.dll",
         "lib/netstandard2.1/zh-Hant/Microsoft.Maui.Controls.resources.dll",
-        "microsoft.maui.controls.core.10.0.20.nupkg.sha512",
+        "microsoft.maui.controls.core.10.0.60.nupkg.sha512",
         "microsoft.maui.controls.core.nuspec"
       ]
     },
-    "Microsoft.Maui.Controls.Xaml/10.0.20": {
-      "sha512": "Ih2rMfJ5B8HbFeNgwsOi31Ngo1A31Zixl8lEuJME+7mXE8VFwVcZcfeKljKG0XTULWxe4/ALZ/nL5tTMMjIFnw==",
+    "Microsoft.Maui.Controls.Xaml/10.0.60": {
+      "sha512": "BHyQ0F6zy4ZTOYjCexTsPNPW2fQyEXDG6uyn4//hYJsimffucJxCEbQgvs7S+mOFmMd25O6Ob/2FFfWGrQUmNg==",
       "type": "package",
-      "path": "microsoft.maui.controls.xaml/10.0.20",
+      "path": "microsoft.maui.controls.xaml/10.0.60",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8360,11 +8804,13 @@
         "lib/net10.0-windows10.0.19041/Design/Microsoft.Maui.Controls.Xaml.DesignTools.pdb",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Controls.Xaml.dll",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Controls.Xaml.pdb",
+        "lib/net10.0-windows10.0.19041/Microsoft.Maui.Controls.Xaml.pri",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Controls.Xaml.xml",
         "lib/net10.0-windows10.0.20348/Design/Microsoft.Maui.Controls.Xaml.DesignTools.dll",
         "lib/net10.0-windows10.0.20348/Design/Microsoft.Maui.Controls.Xaml.DesignTools.pdb",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Controls.Xaml.dll",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Controls.Xaml.pdb",
+        "lib/net10.0-windows10.0.20348/Microsoft.Maui.Controls.Xaml.pri",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Controls.Xaml.xml",
         "lib/net10.0/Design/Microsoft.Maui.Controls.Xaml.DesignTools.dll",
         "lib/net10.0/Design/Microsoft.Maui.Controls.Xaml.DesignTools.pdb",
@@ -8381,14 +8827,14 @@
         "lib/netstandard2.1/Microsoft.Maui.Controls.Xaml.dll",
         "lib/netstandard2.1/Microsoft.Maui.Controls.Xaml.pdb",
         "lib/netstandard2.1/Microsoft.Maui.Controls.Xaml.xml",
-        "microsoft.maui.controls.xaml.10.0.20.nupkg.sha512",
+        "microsoft.maui.controls.xaml.10.0.60.nupkg.sha512",
         "microsoft.maui.controls.xaml.nuspec"
       ]
     },
-    "Microsoft.Maui.Core/10.0.20": {
-      "sha512": "xbrQSNTMJzwpR80ga7eWVTU544NJUJM6zXdmfx1LenuizoFc8oejr1nJ1zRgISTQ0ZuQEs6flF72DyF/YemP8w==",
+    "Microsoft.Maui.Core/10.0.60": {
+      "sha512": "FzwLJdrlmHCPGXd1NB312amKKINNCC2ZBQKnWti8qLNaRNbV0qPyRcvRPlmDedqXojEf676rzssZjOhwSRSHRQ==",
       "type": "package",
-      "path": "microsoft.maui.core/10.0.20",
+      "path": "microsoft.maui.core/10.0.60",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8411,9 +8857,11 @@
         "lib/net10.0-android36.0/maui.aar",
         "lib/net10.0-ios26.0/Microsoft.Maui.dll",
         "lib/net10.0-ios26.0/Microsoft.Maui.pdb",
+        "lib/net10.0-ios26.0/Microsoft.Maui.resources.zip",
         "lib/net10.0-ios26.0/Microsoft.Maui.xml",
         "lib/net10.0-maccatalyst26.0/Microsoft.Maui.dll",
         "lib/net10.0-maccatalyst26.0/Microsoft.Maui.pdb",
+        "lib/net10.0-maccatalyst26.0/Microsoft.Maui.resources.zip",
         "lib/net10.0-maccatalyst26.0/Microsoft.Maui.xml",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.dll",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.pdb",
@@ -8432,14 +8880,14 @@
         "lib/netstandard2.1/Microsoft.Maui.dll",
         "lib/netstandard2.1/Microsoft.Maui.pdb",
         "lib/netstandard2.1/Microsoft.Maui.xml",
-        "microsoft.maui.core.10.0.20.nupkg.sha512",
+        "microsoft.maui.core.10.0.60.nupkg.sha512",
         "microsoft.maui.core.nuspec"
       ]
     },
-    "Microsoft.Maui.Essentials/10.0.20": {
-      "sha512": "jalsUhCCL+T5qng/OXAkJhSaV/Uhml3s4LLExx/RBVz4z/kSIOjyXLkV/O66BBUxy/0nPFILeNx9p21TVqWrMg==",
+    "Microsoft.Maui.Essentials/10.0.60": {
+      "sha512": "zrE6EmEwblpt0LOG6OcDfxmm6kQw6Ch9RjYuQBH7U4Kz6Sl03LXQ0N29h6/Ox58WwHolC5CTq03qr8iQtEOxcA==",
       "type": "package",
-      "path": "microsoft.maui.essentials/10.0.20",
+      "path": "microsoft.maui.essentials/10.0.60",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8459,9 +8907,11 @@
         "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Essentials.xml",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Essentials.dll",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Essentials.pdb",
+        "lib/net10.0-windows10.0.19041/Microsoft.Maui.Essentials.pri",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Essentials.xml",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Essentials.dll",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Essentials.pdb",
+        "lib/net10.0-windows10.0.20348/Microsoft.Maui.Essentials.pri",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Essentials.xml",
         "lib/net10.0/Microsoft.Maui.Essentials.dll",
         "lib/net10.0/Microsoft.Maui.Essentials.pdb",
@@ -8472,14 +8922,14 @@
         "lib/netstandard2.1/Microsoft.Maui.Essentials.dll",
         "lib/netstandard2.1/Microsoft.Maui.Essentials.pdb",
         "lib/netstandard2.1/Microsoft.Maui.Essentials.xml",
-        "microsoft.maui.essentials.10.0.20.nupkg.sha512",
+        "microsoft.maui.essentials.10.0.60.nupkg.sha512",
         "microsoft.maui.essentials.nuspec"
       ]
     },
-    "Microsoft.Maui.Graphics/10.0.20": {
-      "sha512": "X1IfBjN/0KcrcbaDU47xNrZufQeI/PJyBVPxt+3a/yNDhduGS+jlihi4sByil7E4VbQTFVPxclevnbhLtWxNQw==",
+    "Microsoft.Maui.Graphics/10.0.60": {
+      "sha512": "4SEY3I1sU/r3PD9B0fYXLL0ttqDibxl1kscWIKkqAmLi6fha0dFL7XMRL3P2mjwkCQQcKLB46iE+ZuI3F/1SHA==",
       "type": "package",
-      "path": "microsoft.maui.graphics/10.0.20",
+      "path": "microsoft.maui.graphics/10.0.60",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8501,9 +8951,11 @@
         "lib/net10.0-macos26.0/Microsoft.Maui.Graphics.xml",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Graphics.dll",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Graphics.pdb",
+        "lib/net10.0-windows10.0.19041/Microsoft.Maui.Graphics.pri",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Graphics.xml",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Graphics.dll",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Graphics.pdb",
+        "lib/net10.0-windows10.0.20348/Microsoft.Maui.Graphics.pri",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Graphics.xml",
         "lib/net10.0/Microsoft.Maui.Graphics.dll",
         "lib/net10.0/Microsoft.Maui.Graphics.pdb",
@@ -8514,14 +8966,14 @@
         "lib/netstandard2.1/Microsoft.Maui.Graphics.dll",
         "lib/netstandard2.1/Microsoft.Maui.Graphics.pdb",
         "lib/netstandard2.1/Microsoft.Maui.Graphics.xml",
-        "microsoft.maui.graphics.10.0.20.nupkg.sha512",
+        "microsoft.maui.graphics.10.0.60.nupkg.sha512",
         "microsoft.maui.graphics.nuspec"
       ]
     },
-    "Microsoft.Maui.Resizetizer/10.0.20": {
-      "sha512": "6MVR9wsKgfN25AuEL/KzDLd5x8TpuBrC0DRvlUq2Ddi0WdO1q0B9VsTePJF8mdDmdLybo4h/F5F59kfOTPzIXA==",
+    "Microsoft.Maui.Resizetizer/10.0.60": {
+      "sha512": "mKuM50Fuu+DUSAf7NY4lVxtvDWgmT6WTRhUvFvomaNvZ1VzzbxlmwniJdWk53RJDnyuAUgFm9FVvAP+41x7rVQ==",
       "type": "package",
-      "path": "microsoft.maui.resizetizer/10.0.20",
+      "path": "microsoft.maui.resizetizer/10.0.60",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8570,7 +9022,7 @@
         "buildTransitive/x64/libSkiaSharp.so",
         "buildTransitive/x86/libHarfBuzzSharp.dll",
         "buildTransitive/x86/libSkiaSharp.dll",
-        "microsoft.maui.resizetizer.10.0.20.nupkg.sha512",
+        "microsoft.maui.resizetizer.10.0.60.nupkg.sha512",
         "microsoft.maui.resizetizer.nuspec"
       ]
     },
@@ -8605,6 +9057,82 @@
         "tools/net/illink.dll",
         "tools/net/illink.runtimeconfig.json",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "sqlite-net-pcl/1.9.172": {
+      "sha512": "go533+huyvg5bOMmCpX+DyvLrcVRiEBIpqEiDHgXRijWIBBNkWnyMr/w+5ZzrUArKY+4ApucsbBnFtP3QITrJg==",
+      "type": "package",
+      "path": "sqlite-net-pcl/1.9.172",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "Logo-low.png",
+        "lib/netstandard2.0/SQLite-net.dll",
+        "lib/netstandard2.0/SQLite-net.xml",
+        "sqlite-net-pcl.1.9.172.nupkg.sha512",
+        "sqlite-net-pcl.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.bundle_green/2.1.10": {
+      "sha512": "u5p4k3su1ZvH1S3Wf3s17zxiPRSsJiG98sIwZv9dD3rzux/i1fccGLgXfltxA2+SUs802DZsJLb5Qpct5UE8nw==",
+      "type": "package",
+      "path": "sqlitepclraw.bundle_green/2.1.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid90/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net461/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net6.0-android31.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net6.0-android31.0/SQLitePCLRaw.batteries_v2.xml",
+        "lib/net6.0-ios14.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net6.0-ios14.2/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net6.0-tvos10.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/xamarinios10/SQLitePCLRaw.batteries_v2.dll",
+        "sqlitepclraw.bundle_green.2.1.10.nupkg.sha512",
+        "sqlitepclraw.bundle_green.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.core/2.1.10": {
+      "sha512": "Ii8JCbC7oiVclaE/mbDEK000EFIJ+ShRPwAvvV89GOZhQ+ZLtlnSWl6ksCNMKu/VGXA4Nfi2B7LhN/QFN9oBcw==",
+      "type": "package",
+      "path": "sqlitepclraw.core/2.1.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.core.dll",
+        "sqlitepclraw.core.2.1.10.nupkg.sha512",
+        "sqlitepclraw.core.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.lib.e_sqlite3.android/2.1.10": {
+      "sha512": "oUVzf9wwyi7ogDRNi2IkoDez8GJ48a0IbnTgnZL90a5DDK+pR6L/AIpAJRaVYJOxR+Wq1YijmNZghGZyq6Z3+g==",
+      "type": "package",
+      "path": "sqlitepclraw.lib.e_sqlite3.android/2.1.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid90/SQLitePCLRaw.lib.e_sqlite3.android.dll",
+        "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.aar",
+        "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll",
+        "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.xml",
+        "sqlitepclraw.lib.e_sqlite3.android.2.1.10.nupkg.sha512",
+        "sqlitepclraw.lib.e_sqlite3.android.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.provider.e_sqlite3/2.1.10": {
+      "sha512": "uZVTi02C1SxqzgT0HqTWatIbWGb40iIkfc3FpFCpE/r7g6K0PqzDUeefL6P6HPhDtc6BacN3yQysfzP7ks+wSQ==",
+      "type": "package",
+      "path": "sqlitepclraw.provider.e_sqlite3/2.1.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0-windows7.0/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
+        "sqlitepclraw.provider.e_sqlite3.nuspec"
       ]
     },
     "Xamarin.Android.Glide/4.16.0.14": {
@@ -10988,9 +11516,13 @@
   },
   "projectFileDependencyGroups": {
     "net10.0-android36.0": [
+      "CommunityToolkit.Maui >= 14.2.0",
+      "CommunityToolkit.Mvvm >= 8.4.0",
       "Microsoft.Extensions.Logging.Debug >= 10.0.0",
-      "Microsoft.Maui.Controls >= 10.0.20",
-      "Microsoft.NET.ILLink.Tasks >= 10.0.8"
+      "Microsoft.Maui.Controls >= 10.0.60",
+      "Microsoft.NET.ILLink.Tasks >= 10.0.8",
+      "SQLitePCLRaw.bundle_green >= 2.1.10",
+      "sqlite-net-pcl >= 1.9.172"
     ]
   },
   "packageFolders": {
@@ -10999,9 +11531,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/CalculadoraDePropinasMAUI.csproj",
-      "projectName": "CalculadoraDePropinasMAUI",
-      "projectPath": "/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/CalculadoraDePropinasMAUI.csproj",
+      "projectUniqueName": "/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/RegistrodeGastos.csproj",
+      "projectName": "RegistrodeGastos",
+      "projectPath": "/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/RegistrodeGastos.csproj",
       "packagesPath": "/home/jose/.nuget/packages/",
       "outputPath": "/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/obj/",
       "projectStyle": "PackageReference",
@@ -11038,19 +11570,35 @@
       "net10.0-android36.0": {
         "targetAlias": "net10.0-android",
         "dependencies": {
+          "CommunityToolkit.Maui": {
+            "target": "Package",
+            "version": "[14.2.0, )"
+          },
+          "CommunityToolkit.Mvvm": {
+            "target": "Package",
+            "version": "[8.4.0, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[10.0.0, )"
           },
           "Microsoft.Maui.Controls": {
             "target": "Package",
-            "version": "[10.0.20, )"
+            "version": "[10.0.60, )"
           },
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
             "version": "[10.0.8, )",
             "autoReferenced": true
+          },
+          "SQLitePCLRaw.bundle_green": {
+            "target": "Package",
+            "version": "[2.1.10, )"
+          },
+          "sqlite-net-pcl": {
+            "target": "Package",
+            "version": "[1.9.172, )"
           }
         },
         "imports": [
@@ -11366,5 +11914,19 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SQLitePCLRaw.lib.e_sqlite3.android' 2.1.10 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3.android",
+      "targetGraphs": [
+        "net10.0-android36.0",
+        "net10.0-android36.0/android-arm64",
+        "net10.0-android36.0/android-x64"
+      ]
+    }
+  ]
 }

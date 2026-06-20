@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Gastos.ViewModels"
+             x:Class="Gastos.SecondPage"
+             x:DataType="vm:TransactionEntryViewModel"
+             BackgroundColor="#0B1220"
+             Title="Nuevo movimiento">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="18">
+            <Border StrokeThickness="0" Padding="24">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="24" />
+                </Border.StrokeShape>
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#132033" Offset="0" />
+                        <GradientStop Color="#20384A" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <VerticalStackLayout Spacing="14">
+                    <Label Text="Registrar movimiento" TextColor="#9FD7E4" FontSize="14" />
+                    <Label Text="Ingresa una suma de dinero para registrarla como ingreso o egreso." TextColor="White" FontSize="18" FontAttributes="Bold" />
+
+                    <Entry
+                        Text="{Binding AmountText, Mode=TwoWay}"
+                        Keyboard="Numeric"
+                        Placeholder="Escribe una suma"
+                        BackgroundColor="#10263A"
+                        TextColor="White"
+                        PlaceholderColor="#90A4B7" />
+
+                    <Editor
+                        Text="{Binding DescriptionText, Mode=TwoWay}"
+                        Placeholder="Agrega una descripción del movimiento"
+                        AutoSize="TextChanges"
+                        BackgroundColor="#10263A"
+                        TextColor="White"
+                        PlaceholderColor="#90A4B7"
+                        HeightRequest="90" />
+
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                        <Button Text="Ingreso" Command="{Binding SetIncomeCommand}" BackgroundColor="#23C483" TextColor="White" CornerRadius="14" />
+                        <Button Grid.Column="1" Text="Egreso" Command="{Binding SetExpenseCommand}" BackgroundColor="#E45B73" TextColor="White" CornerRadius="14" />
+                    </Grid>
+
+                    <Label Text="Tipo seleccionado:" TextColor="#9EB4C4" FontAttributes="Bold" />
+                    <Label Text="{Binding OperationLabel}" TextColor="White" FontSize="28" FontAttributes="Bold" />
+
+                    <Button Text="Guardar movimiento" Command="{Binding SaveCommand}" BackgroundColor="#2B8DFF" TextColor="White" CornerRadius="16" />
+
+                    <Button Text="Volver al inicio" Command="{Binding GoHomeCommand}" BackgroundColor="#16324A" TextColor="White" CornerRadius="16" />
+
+                    <Label Text="{Binding StatusMessage}" TextColor="#D0E7EF" FontSize="13" />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

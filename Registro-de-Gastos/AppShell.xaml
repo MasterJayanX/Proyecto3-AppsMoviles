@@ -7,8 +7,13 @@
     Title="Gastos">
 
     <ShellContent
-        Title="Registro de Gastos"
+        Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+    <ShellContent
+        Title="Movimiento"
+        ContentTemplate="{DataTemplate local:SecondPage}"
+        Route="SecondPage" />
 
 </Shell>

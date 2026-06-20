@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "JNo9ztzDrz4=",
+  "dgSpecHash": "ba7ARUDWBaY=",
   "success": true,
-  "projectFilePath": "/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/CalculadoraDePropinasMAUI.csproj",
+  "projectFilePath": "/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/RegistrodeGastos.csproj",
   "expectedPackageFiles": [
+    "/home/jose/.nuget/packages/communitytoolkit.maui/14.2.0/communitytoolkit.maui.14.2.0.nupkg.sha512",
+    "/home/jose/.nuget/packages/communitytoolkit.maui.core/14.2.0/communitytoolkit.maui.core.14.2.0.nupkg.sha512",
+    "/home/jose/.nuget/packages/communitytoolkit.mvvm/8.4.0/communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "/home/jose/.nuget/packages/googlegson/2.13.1.1/googlegson.2.13.1.1.nupkg.sha512",
     "/home/jose/.nuget/packages/microsoft.extensions.configuration/10.0.0/microsoft.extensions.configuration.10.0.0.nupkg.sha512",
     "/home/jose/.nuget/packages/microsoft.extensions.configuration.abstractions/10.0.0/microsoft.extensions.configuration.abstractions.10.0.0.nupkg.sha512",
@@ -17,15 +20,20 @@
     "/home/jose/.nuget/packages/microsoft.extensions.logging.debug/10.0.0/microsoft.extensions.logging.debug.10.0.0.nupkg.sha512",
     "/home/jose/.nuget/packages/microsoft.extensions.options/10.0.0/microsoft.extensions.options.10.0.0.nupkg.sha512",
     "/home/jose/.nuget/packages/microsoft.extensions.primitives/10.0.0/microsoft.extensions.primitives.10.0.0.nupkg.sha512",
-    "/home/jose/.nuget/packages/microsoft.maui.controls/10.0.20/microsoft.maui.controls.10.0.20.nupkg.sha512",
-    "/home/jose/.nuget/packages/microsoft.maui.controls.build.tasks/10.0.20/microsoft.maui.controls.build.tasks.10.0.20.nupkg.sha512",
-    "/home/jose/.nuget/packages/microsoft.maui.controls.core/10.0.20/microsoft.maui.controls.core.10.0.20.nupkg.sha512",
-    "/home/jose/.nuget/packages/microsoft.maui.controls.xaml/10.0.20/microsoft.maui.controls.xaml.10.0.20.nupkg.sha512",
-    "/home/jose/.nuget/packages/microsoft.maui.core/10.0.20/microsoft.maui.core.10.0.20.nupkg.sha512",
-    "/home/jose/.nuget/packages/microsoft.maui.essentials/10.0.20/microsoft.maui.essentials.10.0.20.nupkg.sha512",
-    "/home/jose/.nuget/packages/microsoft.maui.graphics/10.0.20/microsoft.maui.graphics.10.0.20.nupkg.sha512",
-    "/home/jose/.nuget/packages/microsoft.maui.resizetizer/10.0.20/microsoft.maui.resizetizer.10.0.20.nupkg.sha512",
+    "/home/jose/.nuget/packages/microsoft.maui.controls/10.0.60/microsoft.maui.controls.10.0.60.nupkg.sha512",
+    "/home/jose/.nuget/packages/microsoft.maui.controls.build.tasks/10.0.60/microsoft.maui.controls.build.tasks.10.0.60.nupkg.sha512",
+    "/home/jose/.nuget/packages/microsoft.maui.controls.core/10.0.60/microsoft.maui.controls.core.10.0.60.nupkg.sha512",
+    "/home/jose/.nuget/packages/microsoft.maui.controls.xaml/10.0.60/microsoft.maui.controls.xaml.10.0.60.nupkg.sha512",
+    "/home/jose/.nuget/packages/microsoft.maui.core/10.0.60/microsoft.maui.core.10.0.60.nupkg.sha512",
+    "/home/jose/.nuget/packages/microsoft.maui.essentials/10.0.60/microsoft.maui.essentials.10.0.60.nupkg.sha512",
+    "/home/jose/.nuget/packages/microsoft.maui.graphics/10.0.60/microsoft.maui.graphics.10.0.60.nupkg.sha512",
+    "/home/jose/.nuget/packages/microsoft.maui.resizetizer/10.0.60/microsoft.maui.resizetizer.10.0.60.nupkg.sha512",
     "/home/jose/.nuget/packages/microsoft.net.illink.tasks/10.0.8/microsoft.net.illink.tasks.10.0.8.nupkg.sha512",
+    "/home/jose/.nuget/packages/sqlite-net-pcl/1.9.172/sqlite-net-pcl.1.9.172.nupkg.sha512",
+    "/home/jose/.nuget/packages/sqlitepclraw.bundle_green/2.1.10/sqlitepclraw.bundle_green.2.1.10.nupkg.sha512",
+    "/home/jose/.nuget/packages/sqlitepclraw.core/2.1.10/sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "/home/jose/.nuget/packages/sqlitepclraw.lib.e_sqlite3.android/2.1.10/sqlitepclraw.lib.e_sqlite3.android.2.1.10.nupkg.sha512",
+    "/home/jose/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.10/sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
     "/home/jose/.nuget/packages/xamarin.android.glide/4.16.0.14/xamarin.android.glide.4.16.0.14.nupkg.sha512",
     "/home/jose/.nuget/packages/xamarin.android.glide.annotations/4.16.0.14/xamarin.android.glide.annotations.4.16.0.14.nupkg.sha512",
     "/home/jose/.nuget/packages/xamarin.android.glide.disklrucache/4.16.0.14/xamarin.android.glide.disklrucache.4.16.0.14.nupkg.sha512",
@@ -120,5 +128,20 @@
     "/home/jose/.nuget/packages/xamarin.kotlinx.serialization.core.jvm/1.9.0.1/xamarin.kotlinx.serialization.core.jvm.1.9.0.1.nupkg.sha512",
     "/home/jose/.nuget/packages/microsoft.netcore.app.ref/10.0.5/microsoft.netcore.app.ref.10.0.5.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'SQLitePCLRaw.lib.e_sqlite3.android' 2.1.10 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "projectPath": "/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/RegistrodeGastos.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/RegistrodeGastos.csproj",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3.android",
+      "targetGraphs": [
+        "net10.0-android36.0",
+        "net10.0-android36.0/android-arm64",
+        "net10.0-android36.0/android-x64"
+      ]
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace CalculadoraDePropinasMAUI;
+namespace Gastos;
 
 public class Program
 {

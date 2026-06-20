@@ -7,7 +7,7 @@ public class ApplicationRegistration {
 	public static void registerApplications ()
 	{
 		// Application and Instrumentation ACWs must be registered first.
-		mono.android.Runtime.register ("CalculadoraDePropinasMAUI.MainApplication, CalculadoraDePropinasMAUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", crc64ecd6b0466258d17a.MainApplication.class, crc64ecd6b0466258d17a.MainApplication.__md_methods);
+		mono.android.Runtime.register ("Gastos.MainApplication, RegistrodeGastos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", crc64908c43f58ae10538.MainApplication.class, crc64908c43f58ae10538.MainApplication.__md_methods);
 		mono.android.Runtime.register ("Microsoft.Maui.MauiApplication, Microsoft.Maui, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null", crc6488302ad6e9e4df1a.MauiApplication.class, crc6488302ad6e9e4df1a.MauiApplication.__md_methods);
 		
 	}

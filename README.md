@@ -17,5 +17,6 @@ Aplicación .NET MAUI para registrar gastos e ingresos.
 4. Presiona `F5` o usa `dotnet run -f net10.0-android` para desplegar la app en Android.
 
 ## Notas
-- Se usa base de datos SQLite (por implementar).
+- Se usa base de datos SQLite.
+- Los datos de saldo e historial de movimientos se guardan, incluso después de cerrar la aplicación.
 - La aplicación se diseñó para cumplir exactamente los requisitos de la rúbrica del proyecto.

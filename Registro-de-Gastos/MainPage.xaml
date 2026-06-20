@@ -1,148 +1,97 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Gastos.ViewModels"
+             xmlns:models="clr-namespace:Gastos.Models"
+             xmlns:vm="clr-namespace:Gastos.ViewModels"
              x:Class="Gastos.MainPage"
-             x:DataType="local:MainViewModel"
-             BackgroundColor="#121212">
+             x:DataType="vm:HomeViewModel"
+             BackgroundColor="#0B1220"
+             Title="Home">
 
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="20">
+        <VerticalStackLayout Padding="20" Spacing="18">
 
-            <Border
-                BackgroundColor="#2B2B2B"
-                StrokeThickness="0"
-                Padding="20">
+            <Border StrokeThickness="0" Padding="24">
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="20" />
+                    <RoundRectangle CornerRadius="24" />
                 </Border.StrokeShape>
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#10233F" Offset="0" />
+                        <GradientStop Color="#0F4C5C" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
 
-                <Grid ColumnDefinitions="2*,1*" RowDefinitions="Auto">
-                    <VerticalStackLayout Spacing="12">
-                        <Label
-                            Text="TOTAL P/PERSONA (CLP)"
-                            TextColor="White"
-                            FontAttributes="Bold"
-                            FontSize="16"
-                            HorizontalOptions="Center" />
-                        <Label
-                            Text="{Binding TotalPorPersona}"
-                            TextColor="White"
-                            FontAttributes="Bold"
-                            FontSize="48" />
-                    </VerticalStackLayout>
-
-                    <VerticalStackLayout
-                        Grid.Column="1"
-                        Spacing="12"
-                        HorizontalOptions="End"
-                        VerticalOptions="Center">
-                        <Label
-                            Text="SUBTOTAL (CLP)"
-                            TextColor="#B0B0B0"
-                            FontAttributes="Bold"
-                            HorizontalOptions="End" />
-                        <Label
-                            Text="{Binding SubtotalPorPersona}"
-                            TextColor="White"
-                            HorizontalOptions="End" />
-                        <Label
-                            Text="PROPINA (CLP)"
-                            TextColor="#B0B0B0"
-                            FontAttributes="Bold"
-                            HorizontalOptions="End" />
-                        <Label
-                            Text="{Binding PropinaPorPersona}"
-                            TextColor="White"
-                            HorizontalOptions="End" />
-                    </VerticalStackLayout>
-                </Grid>
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Banco personal" TextColor="#9FD7E4" FontSize="14" />
+                    <Label Text="Saldo disponible" TextColor="White" FontSize="18" />
+                    <Label Text="{Binding TotalDisponibleTexto}" TextColor="White" FontAttributes="Bold" FontSize="44" />
+                    <Label Text="{Binding ResumenTexto}" TextColor="#D0E7EF" FontSize="14" />
+                </VerticalStackLayout>
             </Border>
 
-            <VerticalStackLayout Spacing="6">
-                <Label
-                    Text="Valor Boleta:"
-                    TextColor="White"
-                    FontAttributes="Bold" />
-                <Entry
-                    Text="{Binding TotalEntrada, Mode=TwoWay}"
-                    Keyboard="Numeric"
-                    Placeholder="Ingrese total"
-                    TextColor="White"
-                    BackgroundColor="#222222"
-                    PlaceholderColor="#888888"
-                    TextChanged="OnTotalEntradaTextChanged" />
-            </VerticalStackLayout>
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                <Border BackgroundColor="#10263A" StrokeThickness="0" Padding="16">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20" />
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Ingresos" TextColor="#8BD3C7" FontSize="13" />
+                        <Label Text="{Binding IngresosTexto}" TextColor="White" FontAttributes="Bold" FontSize="24" />
+                    </VerticalStackLayout>
+                </Border>
 
-            <Label
-                Text="Elige Propina"
-                TextColor="White"
-                FontAttributes="Bold" />
+                <Border Grid.Column="1" BackgroundColor="#2A1E2F" StrokeThickness="0" Padding="16">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20" />
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Egresos" TextColor="#F5A3B7" FontSize="13" />
+                        <Label Text="{Binding EgresosTexto}" TextColor="White" FontAttributes="Bold" FontSize="24" />
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
 
-            <HorizontalStackLayout Spacing="10">
-                <Button
-                    Text="10%"
-                    Command="{Binding EstablecerPorcentajePropina}"
-                    CommandParameter="10"
-                    BackgroundColor="#5A2DFF"
-                    TextColor="White"
-                    CornerRadius="12" />
-                <Button
-                    Text="15%"
-                    Command="{Binding EstablecerPorcentajePropina}"
-                    CommandParameter="15"
-                    BackgroundColor="#5A2DFF"
-                    TextColor="White"
-                    CornerRadius="12" />
-                <Button
-                    Text="20%"
-                    Command="{Binding EstablecerPorcentajePropina}"
-                    CommandParameter="20"
-                    BackgroundColor="#5A2DFF"
-                    TextColor="White"
-                    CornerRadius="12" />
-            </HorizontalStackLayout>
+            <Grid ColumnDefinitions="*,Auto" VerticalOptions="Center">
+                <Label Text="Historial de movimientos" TextColor="White" FontAttributes="Bold" FontSize="18" />
+                <Button Grid.Column="1" Text="Nuevo movimiento" Command="{Binding IrACrearMovimientoCommand}" BackgroundColor="#2B8DFF" TextColor="White" CornerRadius="14" />
+            </Grid>
 
-            <Label
-                Text="{Binding TextoPorcentajePropina}"
-                TextColor="White"
-                FontAttributes="Bold" />
+            <CollectionView ItemsSource="{Binding Movimientos}" SelectionMode="None">
+                <CollectionView.EmptyView>
+                    <Border BackgroundColor="#121A2A" StrokeThickness="0" Padding="20">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Label Text="Aún no hay ingresos ni egresos registrados." TextColor="#9EB4C4" />
+                    </Border>
+                </CollectionView.EmptyView>
 
-            <Slider
-                Minimum="0"
-                Maximum="50"
-                Value="{Binding PorcentajePropina, Mode=TwoWay}"
-                MinimumTrackColor="#5A2DFF"
-                MaximumTrackColor="#555555" />
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:FinancialTransaction">
+                        <Border BackgroundColor="#111A2A" StrokeThickness="0" Padding="16" Margin="0,0,0,12">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="18" />
+                            </Border.StrokeShape>
+                            <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto" ColumnSpacing="12">
+                                <Border BackgroundColor="{Binding TypeColor}" StrokeThickness="0" WidthRequest="12" HeightRequest="12" VerticalOptions="Start">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="6" />
+                                    </Border.StrokeShape>
+                                </Border>
 
-            <Label
-                Text="Dividir el Total"
-                TextColor="White"
-                FontAttributes="Bold" />
+                                <VerticalStackLayout Grid.Column="1" Spacing="2">
+                                    <Label Text="{Binding MovementTypeLabel}" TextColor="White" FontAttributes="Bold" />
+                                    <Label Text="{Binding CreatedAtLabel}" TextColor="#90A4B7" FontSize="12" />
+                                    <Label Text="{Binding Description}" TextColor="#D0E7EF" FontSize="12" LineBreakMode="TailTruncation" />
+                                </VerticalStackLayout>
 
-            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
-                <Button
-                    Text="-"
-                    Command="{Binding ComandoDisminuirPersonas}"
-                    BackgroundColor="#5A2DFF"
-                    TextColor="White"
-                    WidthRequest="56"
-                    CornerRadius="12" />
-                <Label
-                    Text="{Binding Personas}"
-                    TextColor="White"
-                    FontSize="24"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"
-                    WidthRequest="56" />
-                <Button
-                    Text="+"
-                    Command="{Binding ComandoIncrementarPersonas}"
-                    BackgroundColor="#5A2DFF"
-                    TextColor="White"
-                    WidthRequest="56"
-                    CornerRadius="12" />
-            </HorizontalStackLayout>
+                                <Label Grid.Column="2" Text="{Binding AmountLabel}" TextColor="White" FontAttributes="Bold" FontSize="18" />
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
         </VerticalStackLayout>
     </ScrollView>

@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace CalculadoraDePropinasMAUI;
+namespace Gastos;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

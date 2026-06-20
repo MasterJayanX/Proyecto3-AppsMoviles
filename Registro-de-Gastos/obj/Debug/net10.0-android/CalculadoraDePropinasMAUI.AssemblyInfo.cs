@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CalculadoraDePropinasMAUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+72e923cbd3f186dd28cc4c85e9cdf4a99b49c917")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+670f6784e4101528665ce77c20b1bfa775951e52")]
 [assembly: System.Reflection.AssemblyProductAttribute("CalculadoraDePropinasMAUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CalculadoraDePropinasMAUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
