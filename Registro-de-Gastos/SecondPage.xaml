@@ -4,58 +4,119 @@
              xmlns:vm="clr-namespace:Gastos.ViewModels"
              x:Class="Gastos.SecondPage"
              x:DataType="vm:TransactionEntryViewModel"
-             BackgroundColor="#0B1220"
-             Title="Nuevo movimiento">
+             BackgroundColor="White"
+             Title="GASTOS">
 
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="18">
-            <Border StrokeThickness="0" Padding="24">
+        <VerticalStackLayout Padding="20" Spacing="14">
+
+            <!-- Título -->
+            <Label Text="Nueva transacción"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#1A1A2E"
+                   Margin="0,10,0,10" />
+
+            <!-- Tarjeta del formulario -->
+            <Border StrokeThickness="0"
+                    Padding="24"
+                    BackgroundColor="White">
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="24" />
+                    <RoundRectangle CornerRadius="18" />
                 </Border.StrokeShape>
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="#132033" Offset="0" />
-                        <GradientStop Color="#20384A" Offset="1" />
-                    </LinearGradientBrush>
-                </Border.Background>
+                <Border.Shadow>
+                    <Shadow Brush="Gray" Offset="0,4" Radius="16" Opacity="0.12" />
+                </Border.Shadow>
 
-                <VerticalStackLayout Spacing="14">
-                    <Label Text="Registrar movimiento" TextColor="#9FD7E4" FontSize="14" />
-                    <Label Text="Ingresa una suma de dinero para registrarla como ingreso o egreso." TextColor="White" FontSize="18" FontAttributes="Bold" />
+                <VerticalStackLayout Spacing="18">
 
-                    <Entry
-                        Text="{Binding AmountText, Mode=TwoWay}"
-                        Keyboard="Numeric"
-                        Placeholder="Escribe una suma"
-                        BackgroundColor="#10263A"
-                        TextColor="White"
-                        PlaceholderColor="#90A4B7" />
+                    <!-- Glosa -->
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="Glosa"
+                               TextColor="#9E9E9E"
+                               FontSize="14" />
+                        <Border StrokeThickness="1.5"
+                                Stroke="#7C3AED"
+                                BackgroundColor="White"
+                                Padding="10,8">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10" />
+                            </Border.StrokeShape>
+                            <Entry Text="{Binding Glosa, Mode=TwoWay}"
+                                   Placeholder=""
+                                   TextColor="#1A1A2E"
+                                   BackgroundColor="Transparent" />
+                        </Border>
+                    </VerticalStackLayout>
 
-                    <Editor
-                        Text="{Binding DescriptionText, Mode=TwoWay}"
-                        Placeholder="Agrega una descripción del movimiento"
-                        AutoSize="TextChanges"
-                        BackgroundColor="#10263A"
-                        TextColor="White"
-                        PlaceholderColor="#90A4B7"
-                        HeightRequest="90" />
+                    <!-- Cantidad -->
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="Cantidad"
+                               TextColor="#9E9E9E"
+                               FontSize="14" />
+                        <Border StrokeThickness="1.5"
+                                Stroke="#7C3AED"
+                                BackgroundColor="White"
+                                Padding="10,8">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10" />
+                            </Border.StrokeShape>
+                            <Entry Text="{Binding Cantidad, Mode=TwoWay}"
+                                   Keyboard="Numeric"
+                                   Placeholder="0"
+                                   TextColor="#1A1A2E"
+                                   BackgroundColor="Transparent" />
+                        </Border>
+                    </VerticalStackLayout>
 
-                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
-                        <Button Text="Ingreso" Command="{Binding SetIncomeCommand}" BackgroundColor="#23C483" TextColor="White" CornerRadius="14" />
-                        <Button Grid.Column="1" Text="Egreso" Command="{Binding SetExpenseCommand}" BackgroundColor="#E45B73" TextColor="White" CornerRadius="14" />
+                    <!-- Fecha -->
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="Fecha"
+                               TextColor="#9E9E9E"
+                               FontSize="14" />
+                        <Border StrokeThickness="1.5"
+                                Stroke="#7C3AED"
+                                BackgroundColor="White"
+                                Padding="10,4">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10" />
+                            </Border.StrokeShape>
+                            <DatePicker Date="{Binding FechaSeleccionada, Mode=TwoWay}"
+                                        TextColor="#1A1A2E"
+                                        BackgroundColor="Transparent" />
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <!-- Checkbox ¿Es ingreso? -->
+                    <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                        <CheckBox IsChecked="{Binding EsIngreso, Mode=TwoWay}"
+                                  Color="#7C3AED" />
+                        <Label Text="¿Es ingreso?"
+                               TextColor="#1A1A2E"
+                               FontSize="15"
+                               VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+
+                    <!-- Botones -->
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="12" Margin="0,6,0,0">
+                        <Button Text="Guardar"
+                                Command="{Binding GuardarCommand}"
+                                BackgroundColor="#5C27D9"
+                                TextColor="White"
+                                CornerRadius="14"
+                                FontAttributes="Bold" />
+                        <Button Grid.Column="1"
+                                Text="Cancelar"
+                                Command="{Binding CancelarCommand}"
+                                BackgroundColor="#C0392B"
+                                TextColor="White"
+                                CornerRadius="14"
+                                FontAttributes="Bold" />
                     </Grid>
 
-                    <Label Text="Tipo seleccionado:" TextColor="#9EB4C4" FontAttributes="Bold" />
-                    <Label Text="{Binding OperationLabel}" TextColor="White" FontSize="28" FontAttributes="Bold" />
-
-                    <Button Text="Guardar movimiento" Command="{Binding SaveCommand}" BackgroundColor="#2B8DFF" TextColor="White" CornerRadius="16" />
-
-                    <Button Text="Volver al inicio" Command="{Binding GoHomeCommand}" BackgroundColor="#16324A" TextColor="White" CornerRadius="16" />
-
-                    <Label Text="{Binding StatusMessage}" TextColor="#D0E7EF" FontSize="13" />
                 </VerticalStackLayout>
             </Border>
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -27,11 +27,11 @@
         <member name="P:Gastos.ViewModels.HomeViewModel.IsBusy">
             <inheritdoc cref="F:Gastos.ViewModels.HomeViewModel.isBusy"/>
         </member>
-        <member name="F:Gastos.ViewModels.HomeViewModel.loadCommand">
-            <summary>The backing field for <see cref="P:Gastos.ViewModels.HomeViewModel.LoadCommand"/>.</summary>
+        <member name="F:Gastos.ViewModels.HomeViewModel.cargarCommand">
+            <summary>The backing field for <see cref="P:Gastos.ViewModels.HomeViewModel.CargarCommand"/>.</summary>
         </member>
-        <member name="P:Gastos.ViewModels.HomeViewModel.LoadCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Gastos.ViewModels.HomeViewModel.LoadAsync"/>.</summary>
+        <member name="P:Gastos.ViewModels.HomeViewModel.CargarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Gastos.ViewModels.HomeViewModel.CargarAsync"/>.</summary>
         </member>
         <member name="F:Gastos.ViewModels.HomeViewModel.irACrearMovimientoCommand">
             <summary>The backing field for <see cref="P:Gastos.ViewModels.HomeViewModel.IrACrearMovimientoCommand"/>.</summary>
@@ -43,44 +43,30 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
         </member>
-        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.AmountText">
-            <inheritdoc cref="F:Gastos.ViewModels.TransactionEntryViewModel.amountText"/>
+        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.Glosa">
+            <inheritdoc cref="F:Gastos.ViewModels.TransactionEntryViewModel.glosa"/>
         </member>
-        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.DescriptionText">
-            <inheritdoc cref="F:Gastos.ViewModels.TransactionEntryViewModel.descriptionText"/>
+        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.Cantidad">
+            <inheritdoc cref="F:Gastos.ViewModels.TransactionEntryViewModel.cantidad"/>
         </member>
-        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.IsIncome">
-            <inheritdoc cref="F:Gastos.ViewModels.TransactionEntryViewModel.isIncome"/>
+        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.FechaSeleccionada">
+            <inheritdoc cref="F:Gastos.ViewModels.TransactionEntryViewModel.fechaSeleccionada"/>
         </member>
-        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.StatusMessage">
-            <inheritdoc cref="F:Gastos.ViewModels.TransactionEntryViewModel.statusMessage"/>
+        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.EsIngreso">
+            <inheritdoc cref="F:Gastos.ViewModels.TransactionEntryViewModel.esIngreso"/>
         </member>
-        <member name="F:Gastos.ViewModels.TransactionEntryViewModel.setIncomeCommand">
-            <summary>The backing field for <see cref="P:Gastos.ViewModels.TransactionEntryViewModel.SetIncomeCommand"/>.</summary>
+        <member name="F:Gastos.ViewModels.TransactionEntryViewModel.guardarCommand">
+            <summary>The backing field for <see cref="P:Gastos.ViewModels.TransactionEntryViewModel.GuardarCommand"/>.</summary>
         </member>
-        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.SetIncomeCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Gastos.ViewModels.TransactionEntryViewModel.SetIncome"/>.</summary>
+        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.GuardarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Gastos.ViewModels.TransactionEntryViewModel.GuardarAsync"/>.</summary>
         </member>
-        <member name="F:Gastos.ViewModels.TransactionEntryViewModel.setExpenseCommand">
-            <summary>The backing field for <see cref="P:Gastos.ViewModels.TransactionEntryViewModel.SetExpenseCommand"/>.</summary>
+        <member name="F:Gastos.ViewModels.TransactionEntryViewModel.cancelarCommand">
+            <summary>The backing field for <see cref="P:Gastos.ViewModels.TransactionEntryViewModel.CancelarCommand"/>.</summary>
         </member>
-        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.SetExpenseCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Gastos.ViewModels.TransactionEntryViewModel.SetExpense"/>.</summary>
-        </member>
-        <member name="F:Gastos.ViewModels.TransactionEntryViewModel.saveCommand">
-            <summary>The backing field for <see cref="P:Gastos.ViewModels.TransactionEntryViewModel.SaveCommand"/>.</summary>
-        </member>
-        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.SaveCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Gastos.ViewModels.TransactionEntryViewModel.SaveAsync"/>.</summary>
-        </member>
-        <member name="F:Gastos.ViewModels.TransactionEntryViewModel.goHomeCommand">
-            <summary>The backing field for <see cref="P:Gastos.ViewModels.TransactionEntryViewModel.GoHomeCommand"/>.</summary>
-        </member>
-        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.GoHomeCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Gastos.ViewModels.TransactionEntryViewModel.GoHomeAsync"/>.</summary>
+        <member name="P:Gastos.ViewModels.TransactionEntryViewModel.CancelarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Gastos.ViewModels.TransactionEntryViewModel.CancelarAsync"/>.</summary>
         </member>
         <member name="T:RegistrodeGastos.Resource">
             <summary>
@@ -232,20 +218,17 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AmountText">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AmountText" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Glosa">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Glosa" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DescriptionText">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DescriptionText" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Cantidad">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Cantidad" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsIncome">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsIncome" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FechaSeleccionada">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FechaSeleccionada" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OperationLabel">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OperationLabel" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StatusMessage">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StatusMessage" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EsIngreso">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EsIngreso" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -271,20 +254,17 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AmountText">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AmountText" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Glosa">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Glosa" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DescriptionText">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DescriptionText" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Cantidad">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Cantidad" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsIncome">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsIncome" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FechaSeleccionada">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FechaSeleccionada" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OperationLabel">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OperationLabel" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StatusMessage">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StatusMessage" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EsIngreso">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EsIngreso" generated properties.</summary>
         </member>
     </members>
 </doc>

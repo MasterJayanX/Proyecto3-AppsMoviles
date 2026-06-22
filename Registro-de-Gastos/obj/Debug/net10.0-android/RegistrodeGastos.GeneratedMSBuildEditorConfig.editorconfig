@@ -27,13 +27,13 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RegistrodeGastos
-build_property.ProjectDir = /home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/
+build_property.ProjectDir = C:\Users\DVD\Desktop\AM\Proyecto3\Proyecto3-AppsMoviles\Registro-de-Gastos\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/App.xaml]
+[C:/Users/DVD/Desktop/AM/Proyecto3/Proyecto3-AppsMoviles/Registro-de-Gastos/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RegistrodeGastos.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
@@ -43,7 +43,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/AppShell.xaml]
+[C:/Users/DVD/Desktop/AM/Proyecto3/Proyecto3-AppsMoviles/Registro-de-Gastos/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RegistrodeGastos.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
@@ -53,7 +53,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/MainPage.xaml]
+[C:/Users/DVD/Desktop/AM/Proyecto3/Proyecto3-AppsMoviles/Registro-de-Gastos/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RegistrodeGastos.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
@@ -63,27 +63,27 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/Resources/Styles/Colors.xaml]
+[C:/Users/DVD/Desktop/AM/Proyecto3/Proyecto3-AppsMoviles/Registro-de-Gastos/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RegistrodeGastos.Resources.Styles.Colors.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.Inflator = SourceGen
 build_metadata.AdditionalFiles.NoWarn = 
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/Resources/Styles/Styles.xaml]
+[C:/Users/DVD/Desktop/AM/Proyecto3/Proyecto3-AppsMoviles/Registro-de-Gastos/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RegistrodeGastos.Resources.Styles.Styles.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.Inflator = SourceGen
 build_metadata.AdditionalFiles.NoWarn = 
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[/home/jose/Documentos/GitHub/Proyecto3-AppsMoviles/Registro-de-Gastos/SecondPage.xaml]
+[C:/Users/DVD/Desktop/AM/Proyecto3/Proyecto3-AppsMoviles/Registro-de-Gastos/SecondPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RegistrodeGastos.SecondPage.xaml
 build_metadata.AdditionalFiles.TargetPath = SecondPage.xaml

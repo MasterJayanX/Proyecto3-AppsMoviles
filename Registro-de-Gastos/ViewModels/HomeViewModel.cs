@@ -24,13 +24,13 @@ public partial class HomeViewModel : ObservableObject
 	private string egresosTexto = "$0";
 
 	[ObservableProperty]
-	private string resumenTexto = "Se inicia con saldo en cero.";
+	private string resumenTexto = "Sin datos, click en el botón + para agregar una nueva transacción";
 
 	[ObservableProperty]
 	private bool isBusy;
 
 	[RelayCommand]
-	private async Task LoadAsync()
+	private async Task CargarAsync()
 	{
 		if (IsBusy)
 		{
@@ -40,15 +40,14 @@ public partial class HomeViewModel : ObservableObject
 		IsBusy = true;
 		try
 		{
-			var transactions = await database.GetTransactionsAsync();
-			var balance = await database.GetBalanceAsync();
+			var transacciones = await database.GetTransactionsAsync();
 
-			Movimientos = new ObservableCollection<FinancialTransaction>(transactions);
-			TotalDisponibleTexto = FormatCurrency(balance);
-			IngresosTexto = FormatCurrency(transactions.Where(transaction => transaction.IsIncome).Sum(transaction => transaction.Amount));
-			EgresosTexto = FormatCurrency(transactions.Where(transaction => !transaction.IsIncome).Sum(transaction => transaction.Amount));
+			Movimientos = new ObservableCollection<FinancialTransaction>(transacciones);
+			TotalDisponibleTexto = FormatearMoneda(CalcularBalance(transacciones));
+			IngresosTexto = FormatearMoneda(CalcularIngresos(transacciones));
+			EgresosTexto = FormatearMoneda(CalcularGastos(transacciones));
 			ResumenTexto = Movimientos.Count == 0
-				? "Se inicia con saldo en cero."
+				? "Sin datos, click en el botón + para agregar una nueva transacción"
 				: $"{Movimientos.Count} movimientos registrados.";
 		}
 		finally
@@ -63,8 +62,23 @@ public partial class HomeViewModel : ObservableObject
 		await Shell.Current.GoToAsync("//SecondPage");
 	}
 
-	private static string FormatCurrency(int amount)
+	private static int CalcularBalance(List<FinancialTransaction> transacciones)
 	{
-		return "$" + amount.ToString("N0", CultureInfo.GetCultureInfo("es-CL"));
+		return transacciones.Sum(transaccion => transaccion.IsIncome ? transaccion.Amount : -transaccion.Amount);
+	}
+
+	private static int CalcularIngresos(List<FinancialTransaction> transacciones)
+	{
+		return transacciones.Where(transaccion => transaccion.IsIncome).Sum(transaccion => transaccion.Amount);
+	}
+
+	private static int CalcularGastos(List<FinancialTransaction> transacciones)
+	{
+		return transacciones.Where(transaccion => !transaccion.IsIncome).Sum(transaccion => transaccion.Amount);
+	}
+
+	private static string FormatearMoneda(int monto)
+	{
+		return "$" + monto.ToString("N0", CultureInfo.GetCultureInfo("es-CL"));
 	}
 }

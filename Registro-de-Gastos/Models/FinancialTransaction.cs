@@ -23,7 +23,7 @@ public class FinancialTransaction
 	public string AmountLabel => (IsIncome ? "+" : "-") + FormatCurrency(Amount);
 
 	[Ignore]
-	public string CreatedAtLabel => CreatedAt.ToString("dd/MM/yyyy HH:mm", CultureInfo.CurrentCulture);
+	public string CreatedAtLabel => CreatedAt.ToString("dd-MM-yyyy", CultureInfo.CurrentCulture);
 
 	[Ignore]
 	public string TypeColor => IsIncome ? "#23C483" : "#E45B73";
